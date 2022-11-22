@@ -1,8 +1,12 @@
 import React from "react";
-import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-  return null;
+  return (
+    <div style={{ height: "200vh" }}>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
