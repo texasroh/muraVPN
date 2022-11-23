@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-b from-sky-900 to-transparent">
+        <section className="bg-gradient-to-b from-sky-900 to-transparent">
             <div className="container mx-auto flex min-h-screen items-center justify-around">
                 <h1 className="text-5xl font-medium leading-tight">
                     심심해서
@@ -24,7 +24,7 @@ const Banner = () => {
                     Free
                 </motion.h1>
             </div>
-        </div>
+        </section>
     );
 };
 
