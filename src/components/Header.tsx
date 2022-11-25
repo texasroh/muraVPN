@@ -35,7 +35,7 @@ const Header = () => {
       animate={navAnimate}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <div>Logo</div>
+        <div className="font-bold">muraVPN</div>
         <div className="flex items-center">
           <div className="cursor-pointer select-none px-4 py-1 font-medium hover:opacity-70">
             How to use
