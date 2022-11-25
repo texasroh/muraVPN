@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import qrImg from "../images/openchat_qr.jpg";
 
-const Contact = () => {
+const Contact = forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section className="container my-8 mx-auto px-8">
+    <section className="container my-8 mx-auto px-8" ref={ref}>
       <h2 className="my-4 text-center text-5xl font-medium text-gray-500">
         Request VPN
       </h2>
@@ -24,6 +25,6 @@ const Contact = () => {
       </ol>
     </section>
   );
-};
+});
 
 export default Contact;

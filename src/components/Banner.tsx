@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
-const Banner = () => {
+const Banner = forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section className="bg-gradient-to-b from-sky-900 to-transparent">
+    <section className="bg-gradient-to-b from-sky-900 to-transparent" ref={ref}>
       <div className="container mx-auto flex min-h-screen flex-col items-center justify-evenly md:flex-row md:justify-around">
         <h1 className="text-3xl font-medium leading-tight md:text-5xl">
           심심해서
@@ -26,6 +27,6 @@ const Banner = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Banner;

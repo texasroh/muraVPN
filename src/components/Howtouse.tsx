@@ -1,6 +1,8 @@
-const Howtouse = () => {
+import { forwardRef } from "react";
+
+const Howtouse = forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section className="container my-8 mx-auto px-8">
+    <section className="container my-8 mx-auto px-8" ref={ref}>
       <h2 className="my-4 text-center text-5xl font-medium text-gray-500">
         How to use
       </h2>
@@ -36,6 +38,6 @@ const Howtouse = () => {
       </ol>
     </section>
   );
-};
+});
 
 export default Howtouse;

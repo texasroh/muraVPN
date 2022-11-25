@@ -14,7 +14,13 @@ const navVariant = {
   },
 };
 
-const Header = () => {
+interface IHeaderProps {
+  onLogoClick: () => void;
+  onHowClick: () => void;
+  onConClick: () => void;
+}
+
+const Header = ({ onLogoClick, onHowClick, onConClick }: IHeaderProps) => {
   const { scrollY } = useScroll();
   const navAnimate = useAnimation();
 
@@ -35,12 +41,20 @@ const Header = () => {
       animate={navAnimate}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="font-bold">muraVPN</div>
+        <div className="cursor-pointer font-bold" onClick={onLogoClick}>
+          muraVPN
+        </div>
         <div className="flex items-center">
-          <div className="cursor-pointer select-none px-4 py-1 font-medium hover:opacity-70">
+          <div
+            className="cursor-pointer select-none px-4 py-1 font-medium hover:opacity-70"
+            onClick={onHowClick}
+          >
             How to use
           </div>
-          <div className="cursor-pointer select-none rounded bg-purple-500 px-4 py-1 font-medium text-white hover:opacity-70">
+          <div
+            className="cursor-pointer select-none rounded bg-purple-500 px-4 py-1 font-medium text-white hover:opacity-70"
+            onClick={onConClick}
+          >
             Request VPN
           </div>
         </div>
